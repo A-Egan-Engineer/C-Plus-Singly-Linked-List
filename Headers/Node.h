@@ -3,19 +3,18 @@
 
 #pragma once
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-class Node {
+class Node { // Node class that holds data and pointer to next node
 
 public:
-	int data;
-	Node* next;
+	int data; // node data to be added
+	Node* next; // Pointer that points to next node
 
-	Node();
+	Node(); // Node constructor
 
-	Node(int data);
+	Node(int data); // Node constructor with data initialisation
 };
 
 #endif //C___SINGLY_LINKED_LIST_NODE_H

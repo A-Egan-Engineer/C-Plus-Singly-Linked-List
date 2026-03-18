@@ -75,8 +75,14 @@ void LinkedList::deleteAtStart() {
 
 void LinkedList::deleteAtEnd() {
 
-    if (head == NULL) {
-        return;
+
+    if (head == NULL) { // If list is empty
+        return; // Exits early
+    }
+    if (!head->next) { // If list consists of only one node
+        delete head; // Deletes last node
+        head = NULL; // Head points to NULL
+        return; // Exit early
     }
     Node* temp = head; // Temp points to head
     Node* previous = head; // Previous points to head
